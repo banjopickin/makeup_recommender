@@ -13,5 +13,7 @@ def parse_boards(lis):
     '''
     outlis = []
     for url in lis:
-        outlis.append(re.split("com",url))
+        board = str(re.split("com",url)[1])
+        if len(board)>3:
+            outlis.append(re.split("com",url)[1])
     return outlis
